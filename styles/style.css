@@ -14,7 +14,13 @@
 
 */
 
-.page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-}
+
+@import url("variables.css");
+@import url("globals.css");
+
+@import url("blocks/header.css");
+@import url("blocks/theme-menu.css");
+@import url("blocks/main.css");
+@import url("blocks/card.css");
+@import url("blocks/page.css");
+@import url("themes.css");

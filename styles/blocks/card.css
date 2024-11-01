@@ -1,0 +1,42 @@
+.card {
+    background-color: var(--themes-background-color);
+    border: 2px solid currentColor;
+    max-inline-size: 669px;
+}
+
+.cards-list {
+    display: grid;
+    justify-items: center
+}
+
+.card__title {
+    padding: 5px 10px;
+    font-size: 18px;
+}
+
+.card__image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.card__image {
+    display: block;
+    max-width: 100%;
+}
+
+.card__content {
+    margin-block-start: 25px;
+    font-size: 18px;
+    line-height: 21px;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+}
+
+.card__buttons{
+    display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,62 @@
+.theme-menu__list {
+    display: grid;
+    gap: 14px;
+    padding-left: 18px;
+}
+
+.theme-menu__button {
+    position: relative;
+    padding: inherit;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity ease 0.3s;
+}
+
+.theme-menu__button::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    bottom: -3px;
+    background-color: currentColor;
+    transform-origin: left;
+    scale: 0 1;
+    transition: scale ease 0.3s;
+}
+
+.theme-menu__button:hover {
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus {
+    opacity: 0.6;
+    outline: none;
+}
+
+.theme-menu__button:focus-visible {
+    opacity: 0.6;
+}
+
+.theme-menu__button:focus-visible::after {
+    scale: 1;
+}
+
+.theme-menu__button::before {
+    content: "▶";
+    position: absolute;
+    left: -20px;
+    visibility: hidden;
+    animation: arrow 0.5s ease-in-out infinite alternate;
+}
+
+.theme-menu__button:disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+    visibility: visible;
+}
