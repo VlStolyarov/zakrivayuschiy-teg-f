@@ -2,29 +2,28 @@
     background-color: var(--themes-background-color);
     border: 2px solid currentColor;
     max-inline-size: 669px;
-}
 
-.cards-list {
+.list {
     display: grid;
     justify-items: center
 }
 
-.card__title {
+.title {
     padding: 5px 10px;
     font-size: 18px;
 }
 
-.card__image-wrapper {
+.image-wrapper {
     position: relative;
     overflow: hidden;
 }
 
-.card__image {
+.image {
     display: block;
     max-width: 100%;
 }
 
-.card__content {
+.content {
     margin-block-start: 25px;
     font-size: 18px;
     line-height: 21px;
@@ -36,7 +35,8 @@
 
 }
 
-.card__buttons{
+.buttons{
     display: flex;
   justify-content: flex-end;
+}
 }

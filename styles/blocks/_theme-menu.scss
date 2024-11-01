@@ -1,10 +1,12 @@
-.theme-menu__list {
+.theme-menu{
+
+.list {
     display: grid;
     gap: 14px;
     padding-left: 18px;
 }
 
-.theme-menu__button {
+.button {
     position: relative;
     padding: inherit;
     font-size: 14px;
@@ -15,7 +17,7 @@
     transition: opacity ease 0.3s;
 }
 
-.theme-menu__button::after {
+.button::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -27,24 +29,24 @@
     transition: scale ease 0.3s;
 }
 
-.theme-menu__button:hover {
+.button:hover {
     opacity: 0.6;
 }
 
-.theme-menu__button:focus {
+.button:focus {
     opacity: 0.6;
     outline: none;
 }
 
-.theme-menu__button:focus-visible {
+.button:focus-visible {
     opacity: 0.6;
 }
 
-.theme-menu__button:focus-visible::after {
+.button:focus-visible::after {
     scale: 1;
 }
 
-.theme-menu__button::before {
+.button::before {
     content: "▶";
     position: absolute;
     left: -20px;
@@ -52,11 +54,12 @@
     animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
-.theme-menu__button:disabled {
+.button:disabled {
     opacity: 0.6;
     pointer-events: none;
 }
 
-.theme-menu__button:disabled::before {
+.button:disabled::before {
     visibility: visible;
+}
 }
