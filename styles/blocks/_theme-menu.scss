@@ -1,12 +1,12 @@
 .theme-menu{
 
-.list {
+&__list {
     display: grid;
     gap: 14px;
     padding-left: 18px;
 }
 
-.button {
+&__button {
     position: relative;
     padding: inherit;
     font-size: 14px;
@@ -17,7 +17,7 @@
     transition: opacity ease 0.3s;
 }
 
-.button::after {
+&__button::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -29,24 +29,24 @@
     transition: scale ease 0.3s;
 }
 
-.button:hover {
+&__button:hover {
     opacity: 0.6;
 }
 
-.button:focus {
+&__button:focus {
     opacity: 0.6;
     outline: none;
 }
 
-.button:focus-visible {
+&__button:focus-visible {
     opacity: 0.6;
 }
 
-.button:focus-visible::after {
+&__button:focus-visible::after {
     scale: 1;
 }
 
-.button::before {
+&__button::before {
     content: "▶";
     position: absolute;
     left: -20px;
@@ -54,12 +54,12 @@
     animation: arrow 0.5s ease-in-out infinite alternate;
 }
 
-.button:disabled {
+&__button:disabled {
     opacity: 0.6;
     pointer-events: none;
 }
 
-.button:disabled::before {
+&__button:disabled::before {
     visibility: visible;
 }
 }

@@ -167,12 +167,12 @@ ol {
   border: 2px solid currentColor;
   font-family: var(--page-accept-font);
 }
-.header .title {
+.header__title {
   font-size: 65px;
   text-transform: uppercase;
   line-height: 65px;
 }
-.header .description {
+.header__description {
   margin-block-start: 20px;
   margin-block-end: 25px;
   text-transform: uppercase;
@@ -180,12 +180,12 @@ ol {
   line-height: 23px;
 }
 
-.theme-menu .list {
+.theme-menu__list {
   display: grid;
   gap: 14px;
   padding-left: 18px;
 }
-.theme-menu .button {
+.theme-menu__button {
   position: relative;
   padding: inherit;
   font-size: 14px;
@@ -195,7 +195,7 @@ ol {
   cursor: pointer;
   transition: opacity ease 0.3s;
 }
-.theme-menu .button::after {
+.theme-menu__button::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -206,31 +206,31 @@ ol {
   scale: 0 1;
   transition: scale ease 0.3s;
 }
-.theme-menu .button:hover {
+.theme-menu__button:hover {
   opacity: 0.6;
 }
-.theme-menu .button:focus {
+.theme-menu__button:focus {
   opacity: 0.6;
   outline: none;
 }
-.theme-menu .button:focus-visible {
+.theme-menu__button:focus-visible {
   opacity: 0.6;
 }
-.theme-menu .button:focus-visible::after {
+.theme-menu__button:focus-visible::after {
   scale: 1;
 }
-.theme-menu .button::before {
+.theme-menu__button::before {
   content: "▶";
   position: absolute;
   left: -20px;
   visibility: hidden;
   animation: arrow 0.5s ease-in-out infinite alternate;
 }
-.theme-menu .button:disabled {
+.theme-menu__button:disabled {
   opacity: 0.6;
   pointer-events: none;
 }
-.theme-menu .button:disabled::before {
+.theme-menu__button:disabled::before {
   visibility: visible;
 }
 
@@ -247,23 +247,23 @@ ol {
   border: 2px solid currentColor;
   max-inline-size: 669px;
 }
-.card .list {
+.card-list {
   display: grid;
   justify-items: center;
 }
-.card .title {
+.card__title {
   padding: 5px 10px;
   font-size: 18px;
 }
-.card .image-wrapper {
+.card__image-wrapper {
   position: relative;
   overflow: hidden;
 }
-.card .image {
+.card__image {
   display: block;
   max-width: 100%;
 }
-.card .content {
+.card__content {
   margin-block-start: 25px;
   font-size: 18px;
   line-height: 21px;
@@ -273,7 +273,7 @@ ol {
   flex-direction: column;
   gap: 27px;
 }
-.card .buttons {
+.card__buttons {
   display: flex;
   justify-content: flex-end;
 }

@@ -3,27 +3,27 @@
     border: 2px solid currentColor;
     max-inline-size: 669px;
 
-.list {
+    &-list {
     display: grid;
     justify-items: center
 }
 
-.title {
+&__title {
     padding: 5px 10px;
     font-size: 18px;
 }
 
-.image-wrapper {
+&__image-wrapper {
     position: relative;
     overflow: hidden;
 }
 
-.image {
+&__image {
     display: block;
     max-width: 100%;
 }
 
-.content {
+&__content {
     margin-block-start: 25px;
     font-size: 18px;
     line-height: 21px;
@@ -35,7 +35,7 @@
 
 }
 
-.buttons{
+&__buttons{
     display: flex;
   justify-content: flex-end;
 }
