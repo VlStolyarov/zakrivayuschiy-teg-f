@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-    --page-main-font: "Inter-Variable", sans-serif serif;
-    --page-accept-font: "PressStart2P", fantasy;
+    --main-font: "Inter-Variable", sans-serif;
+    --accept-font: "PressStart2P";
 
     --text-color: #000000;
     --page-background-color: #ffffff;
@@ -10,8 +10,8 @@
     --background-color: #000;
     --button-text-color: #00cc14;
     --animation-color: #ff0000;
-    --font-weight-title: 785;
-    --font-weight-content: 465;
+    --font-weight-title: 700;
+    --font-weight-content: 400;
 
     --background-image:
         repeating-linear-gradient(90deg, black 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
