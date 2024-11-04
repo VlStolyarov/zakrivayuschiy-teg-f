@@ -29,7 +29,7 @@
 }
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
-  --main-font: "Inter-Variable", sans-serif;
+  --main-font: "Inter", sans-serif;
   --accept-font: "PressStart2P";
   --text-color: #000000;
   --page-background-color: #ffffff;
@@ -151,7 +151,8 @@ ol {
   block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  clip-path: inset(50%);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
   white-space: nowrap;
 }
 
@@ -201,6 +202,7 @@ ol {
   width: 100%;
   height: 2px;
   bottom: -3px;
+  left: 0;
   background-color: currentColor;
   transform-origin: left;
   scale: 0 1;
@@ -263,42 +265,39 @@ ol {
   font-size: 14px;
   text-transform: uppercase;
   text-shadow: 0 0 1px var(--background-color);
-  margin-block-start: 27px;
-  margin-left: 573px;
+  top: 27px;
+  left: 573px;
   mix-blend-mode: hard-light;
 }
 .card__image-wrapper {
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .card__image {
   display: block;
-  max-width: 100%;
 }
 .card__content {
-  margin-block-start: 25px;
+  padding: 27px 25px 25px 25px;
   font-size: 18px;
   line-height: 21px;
-  padding-left: 25px;
-  padding-right: 25px;
   display: flex;
   flex-direction: column;
   gap: 27px;
 }
 .card__button {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
 }
 .card__like-button {
   min-width: 130px;
-  margin-right: 25px;
-  margin-left: 25px;
 }
 .card__button-specification {
   position: relative;
   cursor: pointer;
   border: 2px solid currentColor;
   background: var(--background-color, #fff);
+  padding: 10px 36px;
   font-family: var(--accept-font);
   font-size: 14px;
   transition: box-shadow ease 0.3s;
@@ -320,6 +319,4 @@ ol {
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

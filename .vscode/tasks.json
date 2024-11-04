@@ -6,7 +6,7 @@
         {
             "label": "Compile SCSS to CSS",
             "type": "shell",
-            "command": "sass C:/Users/user/Desktop/dev/zakrivayuschiy-teg-f/styles/style.scss C:/Users/user/Desktop/dev/zakrivayuschiy-teg-f/styles/style.css",
+            "command": "sass ./styles/style.scss ./dist/style.css",
             "group": "build"
         }
     ]

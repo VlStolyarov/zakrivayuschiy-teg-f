@@ -15,12 +15,14 @@
 */
 
 
-@import 
-'../fonts/fonts',
-'./variables',
-'./themes',
-'./animations',
-'./globals';
+@import '../fonts/fonts';
+@import './variables';
+@import'./themes';
+@import './animations';
+@import './globals';
 
-@import './blocks/_header', './blocks/_theme-menu', './blocks/_main', './blocks/_card',
-'./blocks/_page'; 
+@import './blocks/_header'; 
+@import './blocks/_theme-menu';
+@import './blocks/_main';
+@import './blocks/_card';
+@import './blocks/_page'; 
