@@ -292,6 +292,27 @@ ol {
     flex-direction: column;
     gap: 27px;
   }
+  .card__image--blur {
+    filter: blur(0.3rem);
+  }
+  .card__image--grayscale {
+    filter: grayscale(0.95);
+  }
+  .card__image--saturate {
+    filter: saturate(200%);
+  }
+  .card__image--sepia {
+    filter: sepia(300%);
+  }
+  .card__image--hue-rotate {
+    filter: hue-rotate(250deg);
+  }
+  .card__image--invert {
+    filter: invert(1);
+  }
+  .card__image--custom {
+    filter: grayscale(0.2) hue-rotate(220deg) brightness(70%);
+  }
   .card__button {
     display: flex;
     justify-content: end;
