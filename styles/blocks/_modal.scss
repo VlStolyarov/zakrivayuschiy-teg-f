@@ -1,0 +1,43 @@
+.modal {
+    border: 2px solid var(--text-color);
+    padding: 25px 30px;
+    color: var(--text-color);
+    font-family: var(--accept-font);
+    line-height: 21px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background: var(--page-background-color);
+    max-width: 353px;
+
+    &::backdrop {
+        background-color: black;
+        opacity: 0.75;
+      }
+
+      &[open] {
+        display: grid;
+        grid-template-rows: repeat(2, min-content);
+        gap: 30px;
+      }
+      &__content {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      &__icon {
+        flex-shrink: 0;
+        max-width: 39px;
+        max-height: 39px;
+      }
+      &__text {
+        font-family: var(--accent-font);
+        font-size: 14px;
+        line-height: 21px;
+        text-transform: uppercase;
+      }
+      &__button {
+        width: 100%;
+        text-transform: uppercase;
+        padding: 9px 17px;
+      }
+}

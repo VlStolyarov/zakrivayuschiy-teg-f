@@ -46,22 +46,49 @@
         gap: 27px;
 
     }
-&__button{
-    display: flex;
-    justify-content: end;
-}
+
+    &__button {
+        display: flex;
+        justify-content: end;
+    }
+
     &__like-button {
         min-width: 130px;
-      }
+    }
 
-      &__button-specification {
+    &__button-specification {
         position: relative;
         cursor: pointer;
         border: 2px solid currentColor;
-        background: var(--background-color, #fff);
+        background: var(--background-color);
         padding: 10px 36px;
         font-family: var(--accept-font);
         font-size: 14px;
         transition: box-shadow ease 0.3s;
-      }
+    }
+
+    &__button-specification:focus {
+        outline: none;
+    }
+
+    &__button-specification:focus-visible {
+        box-shadow: 2px 2px 0px 0px var(--background-color);
+    }
+
+    &__button-specification::before {
+        content: "";
+        position: absolute;
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        background-color: var(--background-color);
+        border: inherit;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: scale ease-in-out 0.5s;
+    }
+
+    .button-fillable:hover::before {
+        scale: 1;
+    }
 }

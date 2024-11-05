@@ -296,11 +296,90 @@ ol {
   position: relative;
   cursor: pointer;
   border: 2px solid currentColor;
-  background: var(--background-color, #fff);
+  background: var(--background-color);
   padding: 10px 36px;
   font-family: var(--accept-font);
   font-size: 14px;
   transition: box-shadow ease 0.3s;
+}
+.card__button-specification:focus {
+  outline: none;
+}
+.card__button-specification:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--background-color);
+}
+.card__button-specification::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--background-color);
+  border: inherit;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: scale ease-in-out 0.5s;
+}
+.card .button-fillable:hover::before {
+  scale: 1;
+}
+
+.footer {
+  background: var(--background-color);
+}
+.footer__button {
+  gap: 8px;
+  padding: 18.5px 21px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.footer__icon {
+  width: 21px;
+  height: 21px;
+}
+
+.modal {
+  border: 2px solid var(--text-color);
+  padding: 25px 30px;
+  color: var(--text-color);
+  font-family: var(--accept-font);
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+  background: var(--page-background-color);
+  max-width: 353px;
+}
+.modal::backdrop {
+  background-color: black;
+  opacity: 0.75;
+}
+.modal[open] {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+.modal__content {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.modal__icon {
+  flex-shrink: 0;
+  max-width: 39px;
+  max-height: 39px;
+}
+.modal__text {
+  font-family: var(--accent-font);
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.modal__button {
+  width: 100%;
+  text-transform: uppercase;
+  padding: 9px 17px;
 }
 
 .page {

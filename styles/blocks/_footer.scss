@@ -1,0 +1,18 @@
+.footer {
+    background: var(--background-color);
+    
+
+    &__button {
+        gap: 8px;
+        padding: 18.5px 21px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon {
+        width: 21px;
+        height: 21px;
+    }
+}
