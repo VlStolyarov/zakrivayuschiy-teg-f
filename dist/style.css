@@ -265,7 +265,7 @@ ol {
   font-family: var(--accept-font);
   font-size: 14px;
   text-shadow: 0 0 1px var(--background-color);
-  inset-inline-end: 13px;
+  inset-inline-end: 20px;
   inset-block-start: 24px;
   mix-blend-mode: hard-light;
 }
