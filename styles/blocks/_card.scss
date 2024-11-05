@@ -55,6 +55,34 @@
             gap: 27px;
 
         }
+        // &__:nth-of-type(2) .card__image{
+        //     filter: saturate(200%);
+        //   }
+          
+        //   &__:nth-of-type(3) {
+        //     filter: hue-rotate(285deg);
+        //   }
+          
+        //   &__:nth-of-type(4) .card__image {
+        //     filter: blur(0.05rem);
+        //   }
+          
+        //   &__:nth-of-type(5) .card__image {
+        //     filter: sepia(10%);
+        //   }
+          
+        //   &__:nth-of-type(6) .card__image {
+        //     filter: grayscale(0.9);
+        //   }
+          
+        //   &__:nth-of-type(7) .card__image {
+        //     filter: brightness(80%);
+        //   }
+          
+        //   &__:nth-of-type(8) .card__image {
+        //     filter: sepia(85%) hue-rotate(257deg) saturate(502%);
+        //   }
+          
 
         &__button {
             display: flex;
