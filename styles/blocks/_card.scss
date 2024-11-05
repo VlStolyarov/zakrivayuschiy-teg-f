@@ -3,9 +3,10 @@
     border: 2px solid currentColor;
     max-width: 696px;
 
-    &-list {
+    &-list__item {
         display: grid;
-        justify-items: center
+        justify-items: center;
+        gap: 50px;
     }
 
     &__title {
@@ -20,75 +21,84 @@
         color: var(--button-text-color);
         font-family: var(--accept-font);
         font-size: 14px;
-        text-transform: uppercase;
         text-shadow: 0 0 1px var(--background-color);
-        top: 27px;
-        left: 573px;
+        inset-inline-end: 13px;
+        inset-block-start: 24px;
         mix-blend-mode: hard-light;
     }
 
-    &__image-wrapper {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-    }
+    @supports (-webkit-text-stroke: 1px var(--background-color)) {
+        &__image-label {
+            -webkit-text-stroke: 1px var(--background-color);
+            text-shadow: none;
+        }
 
-    &__image {
-        display: block;
-    }
+        &__image-wrapper {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
 
-    &__content {
-        padding: 27px 25px 25px 25px;
-        font-size: 18px;
-        line-height: 21px;
-        display: flex;
-        flex-direction: column;
-        gap: 27px;
+        &__image {
+            display: block;
+            inline-size: 100%;
+            aspect-ratio: 1 / 1;
 
-    }
+        }
 
-    &__button {
-        display: flex;
-        justify-content: end;
-    }
+        &__content {
+            padding: 27px 25px 25px 25px;
+            font-size: 18px;
+            line-height: 21px;
+            display: flex;
+            flex-direction: column;
+            gap: 27px;
 
-    &__like-button {
-        min-width: 130px;
-    }
+        }
 
-    &__button-specification {
-        position: relative;
-        cursor: pointer;
-        border: 2px solid currentColor;
-        background: var(--background-color);
-        padding: 10px 36px;
-        font-family: var(--accept-font);
-        font-size: 14px;
-        transition: box-shadow ease 0.3s;
-    }
+        &__button {
+            display: flex;
+            justify-content: end;
+        }
 
-    &__button-specification:focus {
-        outline: none;
-    }
+        &__like-button {
+            min-width: 130px;
+        }
 
-    &__button-specification:focus-visible {
-        box-shadow: 2px 2px 0px 0px var(--background-color);
-    }
+        &__button-specification {
+            position: relative;
+            cursor: pointer;
+            border: 2px solid currentColor;
+            background: var(--background-color);
+            padding: 10px 36px;
+            font-family: var(--accept-font);
+            font-size: 14px;
+            transition: box-shadow ease 0.3s;
+        }
 
-    &__button-specification::before {
-        content: "";
-        position: absolute;
-        display: block;
-        inline-size: 100%;
-        block-size: 100%;
-        background-color: var(--background-color);
-        border: inherit;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: scale ease-in-out 0.5s;
-    }
+        &__button-specification:focus {
+            outline: none;
+        }
 
-    .button-fillable:hover::before {
-        scale: 1;
+        &__button-specification:focus-visible {
+            box-shadow: 2px 2px 0px 0px var(--background-color);
+        }
+
+        &__button-specification::before {
+            content: "";
+            position: absolute;
+            display: block;
+            inline-size: 100%;
+            block-size: 100%;
+            background-color: var(--background-color);
+            border: inherit;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: scale ease-in-out 0.5s;
+        }
+
+        .button-fillable:hover::before {
+            scale: 1;
+        }
     }
 }
