@@ -32,7 +32,6 @@
   --main-font: "Inter", sans-serif;
   --accept-font: "PressStart2P";
   --text-color: #000000;
-  --page-background-color: #ffffff;
   --main-color: #00cc14;
   --background-color: #000;
   --button-text-color: #00cc14;
@@ -355,6 +354,8 @@ ol {
 
 .footer {
   background: var(--background-color);
+  display: flex;
+  justify-content: center;
 }
 .footer__button {
   gap: 8px;
@@ -363,6 +364,9 @@ ol {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  border: 2px solid var(--main-color);
+  position: relative;
+  width: 335px;
 }
 .footer__icon {
   width: 21px;
@@ -370,14 +374,14 @@ ol {
 }
 
 .modal {
-  border: 2px solid var(--text-color);
+  border: 2px solid var(--button-text-color);
   padding: 25px 30px;
-  color: var(--text-color);
+  color: var(--button-text-color);
   font-family: var(--accept-font);
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
-  background: var(--page-background-color);
+  background: var(--background-color);
   max-width: 353px;
 }
 .modal::backdrop {

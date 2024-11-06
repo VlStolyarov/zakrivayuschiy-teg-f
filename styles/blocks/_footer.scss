@@ -1,5 +1,7 @@
 .footer {
     background: var(--background-color);
+    display: flex;
+    justify-content: center;
     
 
     &__button {
@@ -9,6 +11,9 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        border: 2px solid var(--main-color);
+        position: relative;
+        width: 335px;
     }
 
     &__icon {
