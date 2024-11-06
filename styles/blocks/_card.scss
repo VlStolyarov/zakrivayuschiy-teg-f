@@ -65,15 +65,15 @@
         }
 
         &__image--saturate {
-            filter: saturate(200%);
+            filter: saturate(400%);
         }
 
         &__image--sepia {
-            filter: sepia(300%)
+            filter: sepia(1)
         }
 
         &__image--hue-rotate {
-            filter: hue-rotate(250deg);
+            filter: hue-rotate(35deg);
         }
 
         &__image--invert {
@@ -81,7 +81,7 @@
         }
 
         &__image--custom {
-            filter: grayscale(0.2) hue-rotate(220deg) brightness(70%);
+            filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
         }
 
 

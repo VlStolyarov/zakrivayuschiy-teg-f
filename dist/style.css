@@ -299,19 +299,19 @@ ol {
     filter: grayscale(0.95);
   }
   .card__image--saturate {
-    filter: saturate(200%);
+    filter: saturate(400%);
   }
   .card__image--sepia {
-    filter: sepia(300%);
+    filter: sepia(1);
   }
   .card__image--hue-rotate {
-    filter: hue-rotate(250deg);
+    filter: hue-rotate(35deg);
   }
   .card__image--invert {
     filter: invert(1);
   }
   .card__image--custom {
-    filter: grayscale(0.2) hue-rotate(220deg) brightness(70%);
+    filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
   }
   .card__button {
     display: flex;
