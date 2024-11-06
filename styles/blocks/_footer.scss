@@ -21,3 +21,13 @@
         height: 21px;
     }
 }
+@media (width < 376px){
+    .footer{
+        flex-direction: column;
+    }
+
+    .footer__icon {
+        block-size: 28px;
+        inline-size: 28px;
+      }
+}

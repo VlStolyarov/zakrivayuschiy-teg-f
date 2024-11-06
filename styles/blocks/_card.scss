@@ -34,116 +34,115 @@
         }
     }
 
-        &__image-wrapper {
-            position: relative;
-            overflow: hidden;
-            width: 100%;
-        }
+    &__image-wrapper {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
 
-        &__image {
-            display: block;
-            inline-size: 100%;
-            aspect-ratio: 1 / 1;
+    &__image {
+        display: block;
+        inline-size: 100%;
+        aspect-ratio: 1 / 1;
 
-        }
+    }
 
-        &__content {
-            padding: 27px 25px 25px 25px;
-            font-size: 18px;
-            line-height: 21px;
-            display: flex;
-            flex-direction: column;
-            gap: 27px;
+    &__content {
+        padding: 27px 25px 25px 25px;
+        font-size: 18px;
+        line-height: 21px;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
 
-        }
+    }
 
-        &__image--blur {
-            filter: blur(0.3rem)
-        }
+    &__image--blur {
+        filter: blur(0.3rem)
+    }
 
-        &__image--grayscale {
-            filter: grayscale(0.95);
-        }
+    &__image--grayscale {
+        filter: grayscale(0.95);
+    }
 
-        &__image--saturate {
-            filter: saturate(400%);
-        }
+    &__image--saturate {
+        filter: saturate(400%);
+    }
 
-        &__image--sepia {
-            filter: sepia(1)
-        }
+    &__image--sepia {
+        filter: sepia(1)
+    }
 
-        &__image--hue-rotate {
-            filter: hue-rotate(35deg);
-        }
+    &__image--hue-rotate {
+        filter: hue-rotate(35deg);
+    }
 
-        &__image--invert {
-            filter: invert(1);
-        }
+    &__image--invert {
+        filter: invert(1);
+    }
 
-        &__image--custom {
-            filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
-        }
+    &__image--custom {
+        filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
+    }
 
+    &__button {
+        display: flex;
+        justify-content: end;
+    }
 
+    &__like-button {
+        min-width: 130px;
+    }
 
-        &__button {
-            display: flex;
-            justify-content: end;
-        }
+    &__button-specification {
+        position: relative;
+        cursor: pointer;
+        border: 2px solid currentColor;
+        background: var(--background-color);
+        padding: 10px 36px;
+        font-family: var(--accept-font);
+        font-size: 14px;
+        transition: box-shadow ease 0.3s;
+    }
 
-        &__like-button {
-            min-width: 130px;
-        }
+    &__button-specification:focus {
+        outline: none;
+    }
 
-        &__button-specification {
-            position: relative;
-            cursor: pointer;
-            border: 2px solid currentColor;
-            background: var(--background-color);
-            padding: 10px 36px;
-            font-family: var(--accept-font);
-            font-size: 14px;
-            transition: box-shadow ease 0.3s;
-        }
+    &__button-specification:focus-visible {
+        box-shadow: 2px 2px 0px 0px var(--background-color);
+    }
 
-        &__button-specification:focus {
-            outline: none;
-        }
+    &__button-specification::before {
+        content: "";
+        position: absolute;
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+        background-color: var(--background-color);
+        border: inherit;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: scale ease-in-out 0.5s;
+    }
 
-        &__button-specification:focus-visible {
-            box-shadow: 2px 2px 0px 0px var(--background-color);
-        }
+    .button-fillable:hover::before {
+        scale: 1;
+    }
 
-        &__button-specification::before {
-            content: "";
-            position: absolute;
-            display: block;
-            inline-size: 100%;
-            block-size: 100%;
-            background-color: var(--background-color);
-            border: inherit;
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: scale ease-in-out 0.5s;
-        }
+    &__icon-button {
+        transition: border-color 0.3s ease;
+        cursor: pointer;
+        background-color: transparent;
+        padding: 0;
+        border: 2px solid transparent;
+    }
 
-        .button-fillable:hover::before {
-            scale: 1;
-        }
-        &__icon-button {
-            transition: border-color 0.3s ease;
-            cursor: pointer;
-            background-color: transparent;
-            padding: 0;
-            border: 2px solid transparent;
-          }
-          
-          .card__icon-button:focus {
-            outline: none;
-          }
-          
-          .card__icon-button:focus-visible {
-            border: 2px solid var(--color_accent);
-          }
+    .card__icon-button:focus {
+        outline: none;
+    }
+
+    .card__icon-button:focus-visible {
+        border: 2px solid var(--color_accent);
+    }
 }
