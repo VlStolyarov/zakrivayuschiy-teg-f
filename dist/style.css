@@ -35,13 +35,15 @@
   --main-color: #00cc14;
   --background-color: #000;
   --button-text-color: #00cc14;
-  --animation-color: #ff0000;
   --font-weight-title: 700;
   --font-weight-content: 400;
   --background-image:
       repeating-linear-gradient(90deg, black 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
       repeating-linear-gradient(180deg, black 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
       linear-gradient(180deg, #007f0c 0%, #004306 100%);
+  --like-contour-color: var(--text-color);
+  --like-sparks-color: #ff0000;
+  --heart-contour-color: #000;
 }
 
 /* В этом файле вы опишете значения переменных в разных цветовых схемах.
@@ -101,6 +103,92 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-4px);
+  }
+}
+@keyframes icon-size {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+@keyframes sparks {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.like-icon .core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.like-icon .contour {
+  transition: fill 0.3s 0.06s;
+  fill: var(--like-contour-color);
+}
+
+.like-icon .sparks {
+  opacity: 0;
+}
+
+.like-icon .main-body {
+  fill: var(--background-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .core {
+  fill: var(--like-sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:active .main-body {
+  fill: var(--like-sparks-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:hover .core {
+  fill: var(--like-contour-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--like-contour-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .core {
+  fill: var(--like-sparks-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--like-sparks-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--like-sparks-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .heart {
+  animation: icon-size 0.3s ease-in 0.1s alternate;
+  transform-origin: center;
+}
+
+.like-icon.is-liked .sparks {
+  animation: 0.3s sparks ease-in 0.3s alternate;
+}
+
 /* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
 Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
 Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
@@ -168,16 +256,16 @@ ol {
   font-family: var(--accept-font);
 }
 .header__title {
-  font-size: 65px;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
-  line-height: 65px;
+  line-height: 1;
 }
 .header__description {
   margin-block-start: 20px;
   margin-block-end: 21px;
   text-transform: uppercase;
-  font-size: 23px;
-  line-height: 23px;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  line-height: 1;
 }
 
 .theme-menu__list {
@@ -273,83 +361,96 @@ ol {
     -webkit-text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
-  .card__image-wrapper {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-  }
-  .card__image {
-    display: block;
-    inline-size: 100%;
-    aspect-ratio: 1/1;
-  }
-  .card__content {
-    padding: 27px 25px 25px 25px;
-    font-size: 18px;
-    line-height: 21px;
-    display: flex;
-    flex-direction: column;
-    gap: 27px;
-  }
-  .card__image--blur {
-    filter: blur(0.3rem);
-  }
-  .card__image--grayscale {
-    filter: grayscale(0.95);
-  }
-  .card__image--saturate {
-    filter: saturate(400%);
-  }
-  .card__image--sepia {
-    filter: sepia(1);
-  }
-  .card__image--hue-rotate {
-    filter: hue-rotate(35deg);
-  }
-  .card__image--invert {
-    filter: invert(1);
-  }
-  .card__image--custom {
-    filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
-  }
-  .card__button {
-    display: flex;
-    justify-content: end;
-  }
-  .card__like-button {
-    min-width: 130px;
-  }
-  .card__button-specification {
-    position: relative;
-    cursor: pointer;
-    border: 2px solid currentColor;
-    background: var(--background-color);
-    padding: 10px 36px;
-    font-family: var(--accept-font);
-    font-size: 14px;
-    transition: box-shadow ease 0.3s;
-  }
-  .card__button-specification:focus {
-    outline: none;
-  }
-  .card__button-specification:focus-visible {
-    box-shadow: 2px 2px 0px 0px var(--background-color);
-  }
-  .card__button-specification::before {
-    content: "";
-    position: absolute;
-    display: block;
-    inline-size: 100%;
-    block-size: 100%;
-    background-color: var(--background-color);
-    border: inherit;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: scale ease-in-out 0.5s;
-  }
-  .card .button-fillable:hover::before {
-    scale: 1;
-  }
+}
+.card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.card__image {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1/1;
+}
+.card__content {
+  padding: 27px 25px 25px 25px;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+.card__image--blur {
+  filter: blur(0.3rem);
+}
+.card__image--grayscale {
+  filter: grayscale(0.95);
+}
+.card__image--saturate {
+  filter: saturate(400%);
+}
+.card__image--sepia {
+  filter: sepia(1);
+}
+.card__image--hue-rotate {
+  filter: hue-rotate(35deg);
+}
+.card__image--invert {
+  filter: invert(1);
+}
+.card__image--custom {
+  filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
+}
+.card__button {
+  display: flex;
+  justify-content: end;
+}
+.card__like-button {
+  min-width: 130px;
+}
+.card__button-specification {
+  position: relative;
+  cursor: pointer;
+  border: 2px solid currentColor;
+  background: var(--background-color);
+  padding: 10px 36px;
+  font-family: var(--accept-font);
+  font-size: 14px;
+  transition: box-shadow ease 0.3s;
+}
+.card__button-specification:focus {
+  outline: none;
+}
+.card__button-specification:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--background-color);
+}
+.card__button-specification::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--background-color);
+  border: inherit;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: scale ease-in-out 0.5s;
+}
+.card .button-fillable:hover::before {
+  scale: 1;
+}
+.card__icon-button {
+  transition: border-color 0.3s ease;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  border: 2px solid transparent;
+}
+.card .card__icon-button:focus {
+  outline: none;
+}
+.card .card__icon-button:focus-visible {
+  border: 2px solid var(--color_accent);
 }
 
 .footer {

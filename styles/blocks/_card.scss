@@ -32,6 +32,7 @@
             -webkit-text-stroke: 1px var(--background-color);
             text-shadow: none;
         }
+    }
 
         &__image-wrapper {
             position: relative;
@@ -130,5 +131,19 @@
         .button-fillable:hover::before {
             scale: 1;
         }
-    }
+        &__icon-button {
+            transition: border-color 0.3s ease;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 0;
+            border: 2px solid transparent;
+          }
+          
+          .card__icon-button:focus {
+            outline: none;
+          }
+          
+          .card__icon-button:focus-visible {
+            border: 2px solid var(--color_accent);
+          }
 }
