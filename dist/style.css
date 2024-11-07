@@ -41,7 +41,7 @@
       repeating-linear-gradient(90deg, black 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
       repeating-linear-gradient(180deg, black 0px 2px, rgba(0, 0, 0, 0) 2px 4px),
       linear-gradient(180deg, #007f0c 0%, #004306 100%);
-  --like-contour-color: var(--text-color);
+  --like-contour-color: var(--button-text-color);
   --like-sparks-color: #ff0000;
   --heart-contour-color: #000;
 }
@@ -332,7 +332,6 @@ ol {
   display: grid;
   justify-items: center;
   margin-block-start: 100px;
-  margin-block-end: 50px;
 }
 
 .card {
@@ -371,6 +370,7 @@ ol {
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-top: 2px solid currentColor;
 }
 .card__image {
   display: block;
@@ -384,6 +384,7 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  border-top: 2px solid currentColor;
 }
 .card__content p:not(:first-of-type) {
   margin-top: 2px;
@@ -430,6 +431,18 @@ ol {
 .card__button-specification:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--background-color);
 }
+.card__button-specification::before {
+  content: "";
+  position: absolute;
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  background-color: var(--background-color);
+  border: inherit;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: scale ease-in-out 0.5s;
+}
 .card .button-fillable:hover::before {
   scale: 1;
 }
@@ -439,6 +452,7 @@ ol {
   background-color: transparent;
   padding: 0;
   border: 2px solid transparent;
+  height: 38px;
 }
 .card .card__icon-button:focus {
   outline: none;
