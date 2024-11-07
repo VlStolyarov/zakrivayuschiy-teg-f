@@ -23,13 +23,13 @@
     font-size: clamp(0.875rem, 0.226rem + 2.769vw, 1.438rem);
   }
 
-  
-  }
 
-  @media (width < 376px) {
-    .header {
-      padding-top: 120px;
-      padding-left: 14px;
-      padding-right: 14px;
-    }
+}
+
+@media (width < 376px) {
+  .header {
+    padding-top: 120px;
+    padding-left: 14px;
+    padding-right: 14px;
   }
+}

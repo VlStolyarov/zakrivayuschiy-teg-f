@@ -53,7 +53,11 @@
         line-height: 21px;
         display: flex;
         flex-direction: column;
-        gap: 27px;
+        gap: 25px;
+
+        p:not(:first-of-type) {
+            margin-top: 2px;
+        }
 
     }
 
@@ -95,10 +99,11 @@
         cursor: pointer;
         border: 2px solid currentColor;
         background: var(--background-color);
-        padding: 10px 36px;
+        padding: 13px 36px;
         font-family: var(--accept-font);
         font-size: 14px;
         transition: box-shadow ease 0.3s;
+        height: 38px;
     }
 
     &__button-specification:focus {
@@ -109,18 +114,18 @@
         box-shadow: 2px 2px 0px 0px var(--background-color);
     }
 
-    &__button-specification::before {
-        content: "";
-        position: absolute;
-        display: block;
-        inline-size: 100%;
-        block-size: 100%;
-        background-color: var(--background-color);
-        border: inherit;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: scale ease-in-out 0.5s;
-    }
+    // &__button-specification::before {
+    //     content: "";
+    //     position: absolute;
+    //     display: block;
+    //     inline-size: 100%;
+    //     block-size: 100%;
+    //     background-color: var(--background-color);
+    //     border: inherit;
+    //     transform: scaleX(0);
+    //     transform-origin: left;
+    //     transition: scale ease-in-out 0.5s;
+    // }
 
     .button-fillable:hover::before {
         scale: 1;
