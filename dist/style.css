@@ -30,7 +30,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --main-font: "Inter", sans-serif;
-  --accept-font: "PressStart2P";
+  --accept-font: "PressStart2P", fantasy;
   --text-color: #000000;
   --main-color: #00cc14;
   --background-color: #000;
@@ -129,10 +129,11 @@
 }
 .like-icon .core {
   transition: fill 0.3s linear 0.03s;
+  fill: transparent;
 }
 
 .like-icon .contour {
-  transition: fill 0.3s 0.06s;
+  transition: fill 0.1s linear;
   fill: var(--like-contour-color);
 }
 
@@ -141,7 +142,7 @@
 }
 
 .like-icon .main-body {
-  fill: var(--background-color);
+  fill: transparent;
   transition: fill 0.3s linear;
 }
 
@@ -425,12 +426,10 @@ ol {
   font-size: 14px;
   transition: box-shadow ease 0.3s;
   height: 38px;
-}
-.card__button-specification:focus {
-  outline: none;
-}
-.card__button-specification:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--background-color);
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  mix-blend-mode: difference;
 }
 .card__button-specification::before {
   content: "";
@@ -438,11 +437,18 @@ ol {
   display: block;
   inline-size: 100%;
   block-size: 100%;
-  background-color: var(--background-color);
+  background-color: var(--text-color);
   border: inherit;
   transform: scaleX(0);
   transform-origin: left;
   transition: scale ease-in-out 0.5s;
+  z-index: -1;
+}
+.card__button-specification:focus {
+  box-shadow: 1px 1px;
+}
+.card__button-specification:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--background-color);
 }
 .card__icon-button {
   transition: border-color 0.3s ease;
@@ -456,12 +462,13 @@ ol {
   outline: none;
 }
 .card__icon-button:focus-visible {
-  border: 2px solid var(--color_accent);
+  border: 2px solid var(--text-color);
 }
 
 .footer {
   display: flex;
   justify-content: center;
+  margin-block-start: 50px;
 }
 .footer__button {
   background: var(--background-color);
@@ -545,6 +552,6 @@ ol {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
 }/*# sourceMappingURL=style.css.map */
