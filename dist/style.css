@@ -347,7 +347,7 @@ ol {
 .card__title {
   padding: 5px 10px;
   font-size: 18px;
-  font-variation-settings: var(--font-weight-title);
+  font-variation-settings: "wght" var(--font-weight-title);
 }
 .card__image-label {
   position: absolute;
@@ -385,6 +385,7 @@ ol {
   flex-direction: column;
   gap: 25px;
   border-top: 2px solid currentColor;
+  font-variation-settings: "wght" var(--font-weight-content);
 }
 .card__content p:not(:first-of-type) {
   margin-top: 2px;
@@ -443,9 +444,6 @@ ol {
   transform-origin: left;
   transition: scale ease-in-out 0.5s;
 }
-.card .button-fillable:hover::before {
-  scale: 1;
-}
 .card__icon-button {
   transition: border-color 0.3s ease;
   cursor: pointer;
@@ -454,10 +452,10 @@ ol {
   border: 2px solid transparent;
   height: 38px;
 }
-.card .card__icon-button:focus {
+.card__icon-button:focus {
   outline: none;
 }
-.card .card__icon-button:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--color_accent);
 }
 

@@ -12,7 +12,7 @@
     &__title {
         padding: 5px 10px;
         font-size: 18px;
-        font-variation-settings: var(--font-weight-title)
+        font-variation-settings: "wght" var(--font-weight-title);
     }
 
     &__image-label {
@@ -56,6 +56,7 @@
         flex-direction: column;
         gap: 25px;
         border-top: 2px solid currentColor;
+        font-variation-settings: "wght" var(--font-weight-content);
 
         p:not(:first-of-type) {
             margin-top: 2px;
@@ -129,9 +130,6 @@
         transition: scale ease-in-out 0.5s;
     }
 
-    .button-fillable:hover::before {
-        scale: 1;
-    }
 
     &__icon-button {
         transition: border-color 0.3s ease;
@@ -142,11 +140,11 @@
         height: 38px;
     }
 
-    .card__icon-button:focus {
+    &__icon-button:focus {
         outline: none;
     }
 
-    .card__icon-button:focus-visible {
-        border: 2px solid var(--color_accent);
+    &__icon-button:focus-visible {
+        border: 2px solid var(--text-color);
     }
 }
