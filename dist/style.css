@@ -415,6 +415,7 @@ ol {
 .card__button {
   display: flex;
   justify-content: end;
+  gap: 4px;
 }
 .card__button-specification {
   position: relative;
