@@ -112,8 +112,17 @@
         width: 130px;
         display: flex;
         justify-content: center;
+        z-index: 1;
     }
-       &__button-specification::before {
+    
+    &__button-specification:focus {
+        box-shadow: 1px 1px;
+    }
+
+    &__button-specification:focus-visible {
+        box-shadow: 2px 2px 0px 0px var(--text-color);
+    }
+    &__button-specification::before {
         content: "";
         position: absolute;
         display: block;
@@ -124,15 +133,11 @@
         transform: scaleX(0);
         transform-origin: left;
         transition: scale ease-in-out 0.5s;
+        z-index: -1;
+        inset: 0;
     }
-
-
-    &__button-specification:focus {
-        box-shadow: 1px 1px;
-    }
-
-    &__button-specification:focus-visible {
-        box-shadow: 2px 2px 0px 0px var(--background-color);
+    &__button-specification:hover::before{
+        transform: scaleX(0);
     }
 
     &__icon-button {
