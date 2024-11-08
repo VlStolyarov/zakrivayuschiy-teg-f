@@ -405,7 +405,7 @@ ol {
   filter: hue-rotate(35deg);
 }
 .card__image--invert {
-  filter: invert(1);
+  filter: invert(0.8);
 }
 .card__image--custom {
   filter: contrast(0.5) grayscale(0.1) hue-rotate(110deg) brightness(150%);
