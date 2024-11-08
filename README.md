@@ -1,4 +1,4 @@
-[Проектная работа](git@github.com:VlStolyarov/zakrivayuschiy-teg-f.git)
+[Проектная работа](https://github.com/VlStolyarov/zakrivayuschiy-teg-f.git)
 
 #  <u>***Проектная работа "Закрывающий тег"***</u>
 
