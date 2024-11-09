@@ -35,6 +35,7 @@
   --main-color: #00cc14;
   --background-color: #000;
   --button-text-color: #00cc14;
+  --background-like-color: #00cc14;
   --font-weight-title: 700;
   --font-weight-content: 400;
   --max-width: 700px;
@@ -68,6 +69,7 @@
 :root.theme-light {
   --main-color: #000;
   --background-color: #fff;
+  --background-like-color: #fff;
   --text-color: #000;
   --button-text-color: #000;
   --font-weight-title: 700;
@@ -429,33 +431,37 @@ ol {
   background: var(--background-color);
   font-family: var(--accept-font);
   font-size: 14px;
-  transition: box-shadow ease 0.3s;
+  transition: box-shadow 0.3s ease;
   display: flex;
   justify-content: center;
-  z-index: 1;
 }
-.card:focus {
-  box-shadow: 1px 1px;
+.card__button-specification:focus {
+  outline: none;
 }
-.card_:focus-visible {
+.card__button-specification:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--text-color);
 }
-.card::before {
+.card__button-specification::before {
+  left: 0;
+  top: 0;
   content: "";
   position: absolute;
   display: block;
   inline-size: 100%;
   block-size: 100%;
-  background-color: var(--text-color);
+  background-color: var(--button-text-color);
   border: inherit;
-  transform: scaleX(0);
+  scale: 0 1;
   transform-origin: left;
-  transition: scale ease-in-out 0.5s;
-  z-index: -1;
-  inset: 0;
+  transition: scale 0.5s ease-in-out;
 }
-.card:hover::before {
-  transform: scaleX(0);
+.card__button-specification:hover::before {
+  scale: 1;
+}
+.card__button-specification > * {
+  color: var(--background-like-color);
+  mix-blend-mode: difference;
+  position: relative;
 }
 .card__icon-button {
   transition: border-color 0.3s ease;
