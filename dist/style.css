@@ -418,28 +418,29 @@ ol {
   justify-content: end;
   gap: 4px;
 }
+.card__like-button {
+  min-width: 130px;
+  padding: 10px 17px;
+}
 .card__button-specification {
   position: relative;
   cursor: pointer;
   border: 2px solid currentColor;
   background: var(--background-color);
-  padding: 13px 36px;
   font-family: var(--accept-font);
   font-size: 14px;
   transition: box-shadow ease 0.3s;
-  height: 38px;
-  width: 130px;
   display: flex;
   justify-content: center;
   z-index: 1;
 }
-.card__button-specification:focus {
+.card:focus {
   box-shadow: 1px 1px;
 }
-.card__button-specification:focus-visible {
+.card_:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--text-color);
 }
-.card__button-specification::before {
+.card::before {
   content: "";
   position: absolute;
   display: block;
@@ -453,7 +454,7 @@ ol {
   z-index: -1;
   inset: 0;
 }
-.card__button-specification:hover::before {
+.card:hover::before {
   transform: scaleX(0);
 }
 .card__icon-button {
@@ -464,10 +465,10 @@ ol {
   border: 2px solid transparent;
   height: 38px;
 }
-.card__icon-button:focus {
+.card:focus {
   outline: none;
 }
-.card__icon-button:focus-visible {
+.card:focus-visible {
   border: 2px solid var(--text-color);
 }
 
