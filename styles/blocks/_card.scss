@@ -167,4 +167,35 @@
     &__icon-button:focus-visible {
         border: 2px solid var(--text-color);
     }
+
+    &__save-button {
+        background: var(--background-color);
+        gap: 8px;
+        padding: 18.5px 21px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--main-color);
+        position: relative;
+        max-width: 335px;
+    }
+
+    &__save__icon {
+        width: 21px;
+        height: 21px;
+    }
+}
+
+@media (width < 376px) {
+
+    .card__save-button {
+        flex-direction: column;
+        padding: 15px 20.5px;
+    }
+
+    .card__save-icon {
+        block-size: 28px;
+        inline-size: 28px;
+    }
 }

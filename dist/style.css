@@ -479,12 +479,7 @@ ol {
 .card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
 }
-
-.footer {
-  display: flex;
-  justify-content: center;
-}
-.footer__button {
+.card__save-button {
   background: var(--background-color);
   gap: 8px;
   padding: 18.5px 21px;
@@ -494,18 +489,19 @@ ol {
   justify-content: center;
   border: 2px solid var(--main-color);
   position: relative;
-  width: 335px;
+  max-width: 335px;
 }
-.footer__icon {
+.card__save__icon {
   width: 21px;
   height: 21px;
 }
 
 @media (width < 376px) {
-  .footer__button {
+  .card__save-button {
     flex-direction: column;
+    padding: 15px 20.5px;
   }
-  .footer__icon {
+  .card__save-icon {
     block-size: 28px;
     inline-size: 28px;
   }
