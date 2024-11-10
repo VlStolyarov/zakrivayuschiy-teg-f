@@ -173,15 +173,15 @@
         gap: 8px;
         padding: 18.5px 21px;
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: row;
         align-items: center;
         justify-content: center;
         border: 2px solid var(--main-color);
         position: relative;
-        max-width: 335px;
+        // max-width: 335px;
     }
 
-    &__save__icon {
+    &__save-icon {
         width: 21px;
         height: 21px;
     }
