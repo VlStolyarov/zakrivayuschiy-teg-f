@@ -6,7 +6,7 @@
     &-list__item {
         display: grid;
         justify-items: center;
-        gap: 50px;
+        margin-bottom: 50px;
     }
 
     &__title {
@@ -25,6 +25,7 @@
         inset-inline-end: 20px;
         inset-block-start: 24px;
         mix-blend-mode: hard-light;
+        z-index: 1;
     }
 
     @supports (-webkit-text-stroke: 1px var(--background-color)) {
@@ -159,11 +160,11 @@
         height: 38px;
     }
 
-    &:focus {
+    &__icon-button:focus {
         outline: none;
     }
 
-    &:focus-visible {
+    &__icon-button:focus-visible {
         border: 2px solid var(--text-color);
     }
 }

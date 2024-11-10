@@ -336,6 +336,7 @@ ol {
   display: grid;
   justify-items: center;
   margin-block-start: 100px;
+  margin-block-end: 50px;
 }
 
 .card {
@@ -346,7 +347,7 @@ ol {
 .card-list__item {
   display: grid;
   justify-items: center;
-  gap: 50px;
+  margin-bottom: 50px;
 }
 .card__title {
   padding: 5px 10px;
@@ -363,6 +364,7 @@ ol {
   inset-inline-end: 20px;
   inset-block-start: 24px;
   mix-blend-mode: hard-light;
+  z-index: 1;
 }
 @supports (-webkit-text-stroke: 1px var(--background-color)) {
   .card__image-label {
@@ -471,17 +473,16 @@ ol {
   border: 2px solid transparent;
   height: 38px;
 }
-.card:focus {
+.card__icon-button:focus {
   outline: none;
 }
-.card:focus-visible {
+.card__icon-button:focus-visible {
   border: 2px solid var(--text-color);
 }
 
 .footer {
   display: flex;
   justify-content: center;
-  margin-block-start: 50px;
 }
 .footer__button {
   background: var(--background-color);
